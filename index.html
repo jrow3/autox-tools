@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>autox.tools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    /* subtle dot grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle, #ffffff06 1px, transparent 1px);
+      background-size: 24px 24px;
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: -1px;
+      margin-bottom: 0.3rem;
+    }
+
+    h1 .dot { color: #ff6b35; }
+
+    .subtitle {
+      color: #444;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+    }
+
+.cards {
+      display: flex;
+      gap: 2.5rem;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      width: 180px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      transition: all 0.4s ease;
+      background: transparent;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .card:hover {
+      background: rgba(255, 107, 53, 0.04);
+      box-shadow: 0 0 30px rgba(255, 107, 53, 0.08), 0 0 60px rgba(255, 107, 53, 0.04);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.5px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.65rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .cards { flex-direction: column; gap: 0; }
+      .card:first-child { border-radius: 8px 8px 0 0; border-right: 1px solid #1a1a1a; border-bottom: none; }
+      .card:last-child { border-radius: 0 0 8px 8px; }
+      .card { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>autox<span class="dot">.</span>tools</h1>
+    <p class="subtitle">open-source tools for autocross</p>
+
+    <div class="cards">
+      <a class="card" href="https://designer.autox.tools">
+        <h2>designer</h2>
+        <p>course layout on satellite imagery</p>
+      </a>
+
+      <a class="card" href="https://rating.autox.tools">
+        <h2>rating</h2>
+        <p>national driver rankings</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
