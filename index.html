@@ -97,12 +97,30 @@
       line-height: 1.6;
     }
 
+    .mobile-note { display: none; }
+
     @media (max-width: 600px) {
+      body { padding: 1.5rem; overflow-y: auto; }
       h1 { font-size: 2.2rem; }
-      .cards { flex-direction: column; gap: 0; }
-      .card:first-child { border-radius: 8px 8px 0 0; border-right: 1px solid #1a1a1a; border-bottom: none; }
-      .card:last-child { border-radius: 0 0 8px 8px; }
-      .card { padding: 2rem; }
+      .subtitle { margin-bottom: 2.5rem; }
+      .cards {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+      .card { width: auto; padding: 1.75rem 1.5rem; }
+      .mobile-note {
+        display: block;
+        margin-top: 0.8rem;
+        color: #ff6b35;
+        font-size: 0.55rem;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
     }
   </style>
 </head>
@@ -115,6 +133,7 @@
       <a class="card" href="https://designer.autox.tools">
         <h2>designer</h2>
         <p>course layout on satellite imagery</p>
+        <p class="mobile-note">desktop only</p>
       </a>
 
       <a class="card" href="https://rating.autox.tools">
